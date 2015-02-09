@@ -36,7 +36,7 @@ Checkout [tests](test) for examples.
 Work on a branch
 
 ```console
-$ git clone https://github.com/postcss/postcss-url.git
+$ git clone https://github.com/vitkarpov/postcss-host.git
 $ git checkout -b patch-1
 $ npm install
 $ npm test
