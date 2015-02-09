@@ -2,7 +2,7 @@
 
 > [PostCSS](https://github.com/postcss/postcss) plugin to make :host selectors work properly with pseudo-classes
 
-## Examples
+## What is it about
 
 If you work with Shadow DOM and web components then you should be familiar with `:host` selector. It has some specialty.
 
