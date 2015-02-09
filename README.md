@@ -8,7 +8,7 @@ If you work with Shadow DOM and web components then you should be familiar with 
 
 Instead of
 
-```
+```css
 .foo:hover {
     ...
 }
@@ -20,7 +20,7 @@ Instead of
 
 you should write
 
-```
+```css
 :host(:hover) {
     ...
 }
