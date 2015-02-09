@@ -2,6 +2,38 @@
 
 > [PostCSS](https://github.com/postcss/postcss) plugin to make :host selectors work properly with pseudo-classes
 
+## Examples
+
+If you work with Shadow DOM and web components then you should be familiar with `:host` selector. It has some specialty.
+
+Instead of
+
+```
+.foo:hover {
+    ...
+}
+
+.foo.bar {
+    ...
+}
+```
+
+you should write
+
+```
+:host(:hover) {
+    ...
+}
+
+:host(.bar) {
+    ...
+}
+```
+
+Postcss-host transforms the first into the second.
+
+It could be useful when css is produced automatically by some preprocessor so you can't do it manually.
+
 ## Installation
 
 ```console
