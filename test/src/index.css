@@ -1,0 +1,19 @@
+:host:after {
+  content: "";
+}
+
+:host:before {
+  content: "";
+}
+
+:host:hover {
+  background: red;
+}
+
+:host:pseudo-class {
+  background: green;
+}
+
+.foo:hover {
+  background: yellow;
+}
