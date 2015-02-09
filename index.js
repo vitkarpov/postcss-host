@@ -1,6 +1,3 @@
-var fs = require("fs");
-var path = require("path");
-
 module.exports = function() {
   return function(css) {
     css.eachRule(function(rule) {
