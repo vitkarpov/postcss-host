@@ -1,6 +1,6 @@
 # postcss-host
 
-> [PostCSS](https://github.com/postcss/postcss) plugin to rebase or inline on url().
+> [PostCSS](https://github.com/postcss/postcss) plugin to make :host selectors work properly with pseudo-classes
 
 ## Installation
 
