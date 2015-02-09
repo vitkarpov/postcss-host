@@ -2,7 +2,7 @@
   "name": "postcss-host",
   "version": "1.0.3",
   "description": "PostCSS plugin to make :host selector works properly with pseudo-classes",
-  "author": "Maxime Thirouin",
+  "author": "Victor Karpov",
   "license": "MIT",
   "repository": {
     "type": "git",
