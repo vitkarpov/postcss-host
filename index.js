@@ -18,7 +18,7 @@ module.exports = function() {
  * @return {Boolean}
  */
 function isHostSelector(selector) {
-  return /^\:host/.test(selector);
+  return /\:host:/.test(selector);
 }
 
 /**
@@ -27,6 +27,5 @@ function isHostSelector(selector) {
  * @return {String}
  */
 function getChangedHostSelector(selector) {
-  var parts = selector.split(':');
-  return ':' + parts[1] + '(:' + parts[2] + ')'; 
+  return selector.replace(/\:host:(\w+\:*\w+)/, ':host(:$1)')
 }
