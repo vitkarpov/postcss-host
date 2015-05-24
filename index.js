@@ -4,9 +4,8 @@ module.exports = function() {
       rule.selector = rule.selectors.map(function(selector) {
         if (isHostSelector(selector)) {
           return getChangedHostSelector(selector);
-        } else {
-          return selector;
         }
+        return selector;
       }).join(', '); 
     });
   }
@@ -27,5 +26,5 @@ function isHostSelector(selector) {
  * @return {String}
  */
 function getChangedHostSelector(selector) {
-  return selector.replace(/\:host:(\w+\:*\w+)/, ':host(:$1)')
+  return selector.replace(/:host:(.+)/, ':host(:$1)');
 }
