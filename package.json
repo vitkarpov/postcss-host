@@ -8,6 +8,7 @@
     "type": "git",
     "url": "https://github.com/vitkarpov/postcss-host.git"
   },
+  "keywords": ["postcss", "webcomponents"], 
   "files": [
     "index.js"
   ],
