@@ -9,11 +9,11 @@ If you work with Shadow DOM and web components then you should be familiar with 
 Instead of
 
 ```css
-.foo:hover {
+:host:hover {
     ...
 }
 
-.foo.bar {
+:host.bar {
     ...
 }
 ```
