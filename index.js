@@ -1,4 +1,6 @@
-module.exports = function() {
+var postcss = require('postcss');
+
+module.exports = postcss.plugin('postcss-host', function () {
   return function(css) {
     css.eachRule(function(rule) {
       rule.selector = rule.selectors.map(function(selector) {
@@ -9,7 +11,7 @@ module.exports = function() {
       }).join(', '); 
     });
   }
-}
+});
 
 /**
  * Check if specified selector is a :host
