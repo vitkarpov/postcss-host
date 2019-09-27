@@ -14,6 +14,14 @@
   background: green;
 }
 
+:host(.class-selector) {
+  background: blue;
+}
+
+:host(:hover) .child-class {
+  background: orange;
+}
+
 .foo:hover {
   background: yellow;
 }

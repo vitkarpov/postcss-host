@@ -2,7 +2,7 @@ var postcss = require('postcss');
 
 module.exports = postcss.plugin('postcss-host', function () {
   return function(css) {
-    css.eachRule(function(rule) {
+    css.walkRules(function(rule) {
       rule.selector = rule.selectors.map(function(selector) {
         if (isHostSelector(selector)) {
           return getChangedHostSelector(selector);
@@ -19,7 +19,7 @@ module.exports = postcss.plugin('postcss-host', function () {
  * @return {Boolean}
  */
 function isHostSelector(selector) {
-  return /\:host:/.test(selector);
+  return /\:host/.test(selector);
 }
 
 /**
@@ -28,5 +28,5 @@ function isHostSelector(selector) {
  * @return {String}
  */
 function getChangedHostSelector(selector) {
-  return selector.replace(/:host:(.+)/, ':host(:$1)');
+  return selector.replace(/:host([^\s]+)/, ':host($1)')
 }
