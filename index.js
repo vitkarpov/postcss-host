@@ -19,7 +19,7 @@ module.exports = postcss.plugin('postcss-host', function () {
  * @return {Boolean}
  */
 function isHostSelector(selector) {
-  return /\:host/.test(selector);
+  return /\:host[^(]/.test(selector);
 }
 
 /**

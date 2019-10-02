@@ -25,3 +25,15 @@
 .foo:hover {
   background: yellow;
 }
+
+:host(:hover) {
+  background: aqua;
+}
+
+:host(.className) {
+  background: white;
+} 
+
+:host(custom-element) {
+  background: black;
+}
