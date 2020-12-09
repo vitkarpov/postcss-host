@@ -18,7 +18,10 @@
   "devDependencies": {
     "expect": "^24.9.0",
     "mocha": "^6.2.0",
-    "postcss": "^7.0.18"
+    "postcss": "^8.2.1"
+  },
+  "peerDependencies": {
+    "postcss": "^8.0.0"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha test/index.js"
