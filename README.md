@@ -52,8 +52,7 @@ var postcssHost = require("postcss-host")
 var css = fs.readFileSync("input.css", "utf8")
 
 // process css
-var output = postcss()
-  .use(postcssHost())
+var output = postcss([postcssHost])
   .process(css, {
     from: "src/index.css"
     to: "dist/index.css"
