@@ -10,8 +10,7 @@ describe('postcssHost', function() {
     var src = fs.readFileSync(path.join(__dirname, 'src/index.css'));
     var dist = fs.readFileSync(path.join(__dirname, 'dist/index.css'));
 
-    var output = postcss()
-      .use(postcssHost())
+    var output = postcss([postcssHost])
       .process(src)
       .css;
 

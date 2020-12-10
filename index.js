@@ -1,17 +1,20 @@
-var postcss = require('postcss');
+module.exports = function () {
+  return {
+    postcssPlugin: 'postcss-host',
+    Rule(rule) {
+      rule.selector = rule.selectors
+        .map(function (selector) {
+          if (isHostSelector(selector)) {
+            return getChangedHostSelector(selector);
+          }
+          return selector;
+        })
+        .join(', ');
+    },
+  };
+};
 
-module.exports = postcss.plugin('postcss-host', function () {
-  return function(css) {
-    css.walkRules(function(rule) {
-      rule.selector = rule.selectors.map(function(selector) {
-        if (isHostSelector(selector)) {
-          return getChangedHostSelector(selector);
-        }
-        return selector;
-      }).join(', '); 
-    });
-  }
-});
+module.exports.postcss = true;
 
 /**
  * Check if specified selector is a :host
